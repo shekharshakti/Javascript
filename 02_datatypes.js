@@ -14,3 +14,4 @@ let state;
 //object
 
 console.log(typeof name);
+console.log(typeof null);
