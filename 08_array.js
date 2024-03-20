@@ -53,8 +53,7 @@ const mynum1 = fruits.slice(1, 3);
 console.log(mynum1); // Output: ['grape', 'orange']
 
 // Using splice() to manipulate the array
-const myn2 = fruits.splice(1, 3); // Removing elements starting from index 1
-console.log("Slice Result:", mynum1); // Output: ['grape', 'orange']
+const myn2 = fruits.splice(1, 3); // Removing elements starting from index 1 and manipulate original string console.log("Slice Result:", mynum1); // Output: ['grape', 'orange']
 console.log("Splice Result:", myn2); // Output: ['grape', 'orange']
 console.log(fruits); // Output: ['apple']
 
