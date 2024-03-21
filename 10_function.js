@@ -101,3 +101,84 @@ console.log(returnSecondValue([200, 400, 500, 1000]));
 // Output: 400
 
 // This logs the second element of the array `[200, 400, 500, 1000]` which is 400.
+
+
+const user1 = {
+    username: "hitesh",
+    price: 999,
+
+    welcomeMessage: function() {
+        console.log(`${this.username}, welcome to the website`);
+        console.log(this);
+    }
+}
+
+// user.welcomeMessage()
+// Output:
+// hitesh, welcome to the website
+// { username: 'hitesh', price: 999, welcomeMessage: [Function: welcomeMessage] }
+
+// The `welcomeMessage` method within the `user` object logs a welcome message containing the username and the context (the `user` object itself).
+
+// user.username = "sam"
+// user.welcomeMessage()
+// Output:
+// sam, welcome to the website
+// { username: 'sam', price: 999, welcomeMessage: [Function: welcomeMessage] }
+
+// The `username` property of the `user` object is updated to "sam", then `welcomeMessage` is called again, 
+// displaying the updated username and the context.
+
+// console.log(this);
+// Output: Global object (e.g., Window in browser, global in Node.js)
+
+// When `this` is used outside of any object, it refers to the global object.
+
+// function chai(){
+//     let username = "hitesh"
+//     console.log(this.username);
+// }
+
+// chai()
+
+// This code results in an error because `this` inside a regular function refers to the global object, 
+// but there is no `username` property in the global object.
+
+// const chai = function () {
+//     let username = "hitesh"
+//     console.log(this.username);
+// }
+
+// The same as the previous example, this function also results in an error due to the same reason.
+
+const chai =  () => {
+    let username = "shekhar"
+    console.log(this);
+}
+
+// chai()
+// Output: Global object (e.g., Window in browser, global in Node.js)
+
+// Arrow functions do not have their own `this` context. They inherit the `this` value from the enclosing lexical context, 
+// which in this case is the global context.
+
+// const addTwo = (num1, num2) => {
+//     return num1 + num2
+// }
+
+// const addTwo = (num1, num2) =>  num1 + num2
+
+// const addTwo = (num1, num2) => ( num1 + num2 )
+
+const addTwo = (num1, num2) => ({username: "shekhar"})
+
+console.log(addTwo(3, 4))
+// Output: { username: 'hitesh' }
+
+// This arrow function returns an object with a `username` property set to "hitesh".
+
+// const myArray = [2, 5, 3, 7, 8]
+
+// myArray.forEach() 
+// The `forEach()` method is called on `myArray` but no callback function is provided, 
+// so this will not result in any action being performed on the elements of the array.
