@@ -43,3 +43,67 @@ console.log(jsUser.greeting()); // Output: Hello JS user
 
 // Invoking the 'greetingTwo' method
 console.log(jsUser.greetingTwo()); // Output: Hello JS user, shekhar
+
+
+// Create an empty object using object literal syntax
+const tinderUser = {}
+
+// Add properties to the tinderUser object
+tinderUser.id = "123abc"
+tinderUser.name = "Sammy"
+tinderUser.isLoggedIn = false
+
+// Define a regularUser object with nested properties
+const regularUser = {
+    email: "some@gmail.com",
+    fullname: {
+        userfullname: {
+            firstname: "shekhar",
+            lastname: "shakti"
+        }
+    }
+}
+
+// Access and log a nested property value
+console.log(regularUser.fullname.userfullname.firstname);
+
+// Create objects obj1, obj2, and obj4
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "a", 4: "b"}
+const obj4 = {5: "a", 6: "b"}
+
+// Combine obj1 and obj2 using spread syntax to create obj3
+const obj3 = {...obj1, ...obj2}
+console.log(obj3);
+
+// Define an array of user objects
+const users = [
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h1@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h2@gmail.com"
+    },
+]
+
+// Access email of the second user in the array
+console.log(users[1].email);
+
+// Define a course object
+const course = {
+    coursename: "js shekhar",
+    price: "999",
+    courseInstructor: "shekhar"
+}
+
+// Destructure the course object to extract the courseInstructor property
+const {courseInstructor: instructor} = course
+
+// Log the value of the extracted property
+console.log(instructor);
